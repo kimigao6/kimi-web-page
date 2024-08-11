@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<!--Meta-->
+	<meta name="keywords"
+		content="Kimi Gao Portfolio, photography, photographer, Great Teton Journey, photos, landscapes, snow mountain" />
+	<meta name="description"
+		content="Explore the majestic landscapes of Grand Teton National Park through vivid photography, capturing the dramatic beauty of the Teton Range, rustic log cabins, and serene Jackson Lake." />
+	<meta name="author" content="Kimi Gao" />
+
+	<title>Great Teton</title>
+
+	<!--CSS Link-->
+	<Link rel="stylesheet" href="banner.css" type="text/css" />
+	<Link rel="stylesheet" href="photo.css" type="text/css" />
+
+	<!--JavaScript Link-->
+	<script src="banner.js"></script>
+
+	<script type="text/javascript">
+		/* Make picture larger */
+		function makeBig(mypic) {
+			event.preventDefault();
+			if (mypic.style.width == "60%") {
+				mypic.style.width = "80%";
+			}
+			else {
+				mypic.style.width = "60%";
+			}
+		}
+
+		function hormakeBig() {
+			event.preventDefault();
+			var pic30 = document.getElementById("first");
+			if (pic30.style.width == "30%") {
+				pic30.style.width = "50%";
+			}
+			else {
+				pic30.style.width = "30%";
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<!--Building Out the Meanu Below-->
+	<div class="banner">
+		<h1>Great Teton</h1>
+
+		<div class="topcol" id="fircol">
+
+			<!--Home Button-->
+			<a href="index.htm" class="active">Home</a>
+
+			<!--Equipment Button-->
+			<div class="drpdwn1">
+				<button class="drpbtn1"><a href="equphotography.htm">Equipment</a></button>
+				<div class="drpdwncontent1">
+					<a href="equphotography.htm">Photography</a>
+					<a href="equvideo.htm">Video</a>
+				</div>
+			</div>
+
+			<div class="drpdwn2">
+				<button class="drpbtn2"><a href="photography.htm">Photography</a></button>
+				<div class="drpdwncontent2">
+					<a href="Boston.htm">Boston</a>
+					<a href="RI.htm">Rhode Island</a>
+					<a href="NF.htm">Niagara Falls</a>
+					<a href="YS.htm">Yellowstone</a>
+					<a href="GT.htm">Great Teton</a>
+					<a href="Yosemite.htm">Yosemite</a>
+					<a href="BJ.htm">Beijing</a>
+					<a href="SR.htm">Sun Rise Observation</a>
+					<a href="Hawaii.htm">Hawaii</a>
+				</div>
+			</div>
+
+			<a href="video.htm">Video</a>
+			<a href="contact.htm">Contact Me</a>
+
+			<!--Icon-->
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	</div>
+
+	<div class="divider">
+		<hr />
+	</div>
+
+	<!--Banner Ending-->
+
+	<div class="basic">
+		<img id="first" class="image" onclick="hormakeBig()" src="photo/Grand Teton/GT1.JPG" alt="Rocky Mountains"
+			title="Rocky Mountains" width="30%" ; />
+		<p>
+			The view showcases the impressive Lower Falls, the largest volume waterfall in the Rocky Mountains of the
+			United States, and nearly double the height of Niagara Falls. The Yellowstone River, flowing from the falls,
+			carves through the rugged canyon, creating a landscape that dramatically displays the geological history and
+			the power of erosion.
+		</p>
+	</div>
+
+	<div class="basic">
+		<img class="image" onclick="makeBig(this)" src="photo/Grand Teton/GT4.JPG" alt=" Teton Range"
+			title=" Teton Range" width="60%" ; />
+		<p>
+			The grandeur of the Teton Range, viewed from Grand Teton National Park in Wyoming, is breathtaking. The
+			majestic peaks rise sharply from the valley floor without any foothills. This unique geologic feature
+			enhances the stunning and dramatic profile of the mountains.
+		</p>
+	</div>
+
+	<div class="basic">
+		<img class="image" onclick="makeBig(this)" src="photo/Grand Teton/GT5.JPG" alt="Log Cabin" title="Log Cabin"
+			width="60%" ; />
+		<p>
+			The contrast between the rustic human-made structure and the soaring, rugged peaks of the Tetons, along with
+			the expansive meadows and a dynamic sky, creates a timeless scene that embodies the spirit of this iconic
+			landscape.
+		</p>
+	</div>
+
+	<div class="basic">
+		<img class="image" onclick="makeBig(this)" src="photo/Grand Teton/GT6.JPG" alt="Log Cabin" title="Log Cabin"
+			width="60%" ; />
+		<p>
+			The image showcases a characteristic scene from Grand Teton National Park, Wyoming, with the impressive
+			Teton Range serving as a magnificent backdrop. Historic wooden structures, such as a log cabin and barn, are
+			situated in the verdant valley floor in the foreground.
+		</p>
+	</div>
+
+	<div class="basic">
+		<img class="image" onclick="makeBig(this)" src="photo/Grand Teton/GT2.JPG" alt="Jackson Lake"
+			title="Jackson Lake" width="60%" ; />
+		<p>
+			The serene beauty of Jackson Lake, with the Teton Range soaring in the background, sits under Wyoming's vast
+			sky. Sunlight dances on the lake's ripples, complementing the rugged peaks, a hallmark of Grand Teton
+			National Park's landscape.
+		</p>
+	</div>
+
+
+</body>
+
+</html>

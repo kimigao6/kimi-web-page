@@ -1,0 +1,55 @@
+/* subtitle font style */
+.subtitle {
+    font-family: Courier;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 70px;
+    padding-bottom: 15px;
+}
+
+/* each paragraph space between */
+.pg {
+    margin-bottom: 250px;
+    margin-left: 60px;
+    margin-right: 60px;
+    position: relative;
+}
+
+/* paragraph font */
+p {
+    font-size: 18px;
+    font-family: Courier new;
+}
+
+ol {
+    font-size: 18px;
+    font-family: Courier new;
+}
+
+img#camera {
+    float: left;
+    padding-right: 60px;
+    padding-top: 15px;
+}
+
+p#p1 {
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+img#lens {
+    float: right;
+    padding-left: 60px;
+}
+
+p#p2 {
+    padding-top: 45px;
+    margin-right: 10px;
+}
+
+div#p3 {
+    margin-left: 60px;
+    margin-right: 80px;
+    margin-bottom: 100px;
+    position: absolute;
+}

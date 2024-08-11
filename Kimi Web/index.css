@@ -1,0 +1,148 @@
+/* paragraph 1 css */
+img#myself {
+    float: left;
+    margin-left: 30px;
+    margin-right: 10%;
+    margin-top: 5%;
+    transition: all .4s ease;
+    width: 400px;
+}
+
+/* Mouse on myself picture effect */
+img#myself.mouseon {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+    box-shadow: 15px 15px #f3edd1;
+}
+
+/* Button Click CSS */
+#click {
+	position: absolute;
+    padding: 8px 20px;
+    width: 10%;
+    height: 5%;
+    border: none;
+    background-color: wheat;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	border-radius: 4px;
+	cursor: pointer;
+    z-index: 100;
+    color: black;
+    font-size: 18px;
+    font-family: Kanit;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.particles {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border-radius: 50%;
+	color: #eee;
+	z-index: 5;
+	margin-left: 250px;
+    margin-top: -49%;
+}
+
+.shape {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	transform: scale(0.8);
+}
+
+.cir {
+	position: absolute;
+	border-radius: 50%;
+	z-index: 5;
+}
+
+/* each paragraph space between */
+.pg {
+    padding: 20px;
+    margin-bottom: 150px;
+}
+
+p {
+    font-size: 20px;
+    font-family: Courier new;
+}
+
+/* Scrolling Text CSS */
+h3#m {
+    position: absolute;
+    font-family: Courier;
+    font-weight: normal;
+    font-size: 24px;
+    margin-top: 13px;
+
+    /* Starting position */
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+
+    /* animation properties */
+    -moz-animation: my-animation 20s linear infinite;
+    -webkit-animation: my-animation 20s linear infinite;
+    animation: my-animation 20s linear infinite;
+}
+
+.scroll {
+    margin-top: -5px;
+    padding-bottom: 50px;
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    height: 1px;
+}
+
+/* paragraph 1 */
+p#p1 {
+    padding-top: 10%;
+    padding-right: 5%;
+    margin-bottom: 2%;
+}
+
+
+/* subtitle font style */
+.subtitle {
+    font-family: Courier;
+    font-size: 35px;
+    padding-left: 30px;
+    text-align: center;
+}
+
+/* paragraph 2 */
+p#p2 {
+    padding-top: 130px;
+    padding-left: 30px;
+    width: 63%;
+}
+
+img#pic1 {
+    float: right;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+img#pic2 {
+    float: right;
+    margin-right: 20px;
+    margin-top: -170px;
+}
+
+/* paragraph 3 */
+p#p3 {
+    width: 80%;
+    padding-top: 50px;
+    padding-left: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* audio */
+audio {
+    display: none;
+}

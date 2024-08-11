@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<!--Meta-->
+	<meta name="keywords"
+		content="Kimi Gao Portfolio, photography, photographer, Contact Kimi Gao, Know more about Kimi" />
+	<meta name="description"
+		content="Reach out to Kimi Gao for inquiries or collaboration opportunities, and connect through social media or directly via email, as Kimi shares a passion for photography and storytelling from Los Angeles and Boston." />
+	<meta name="author" content="Kimi Gao" />
+
+	<title>Contact Me</title>
+
+	<!--CSS Link-->
+	<Link rel="stylesheet" href="banner.css" type="text/css" />
+	<Link rel="stylesheet" href="contact.css" type="text/css" />
+
+	<!-- Add Font Awesome for icons -->
+	<!--Find on ChatGPT-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	
+	<!--JavaScript Link-->
+	<script src="banner.js"></script>
+
+	<script type="text/javascript">
+		/* Form Validation */
+		function validateForm() {
+			event.preventDefault();
+
+			var myf, myfirstname, mylastname, mygender, myreason, myphone, myemail, mycheckbox, mycheckbox;
+
+			myf = document.getElementById("m")
+			myfirstname = myf.first_name.value;
+			mylastname = myf.last_name.value;
+			mygender = myf.gender.value;
+			myreason = myf.contact-reason.value;
+			myphone = myf.phone.value;
+			myemail = myf.email.value;
+			mycheckbox = myf.message.value;
+			
+			var mygendervalue = 0;
+			var myreasonvalue = 0;
+
+			// Gender
+			for (var x = 0; x < myf.gender.length; ++x) {
+				if (myf.gender[x].checked == true) {
+					mygendervalue = myf.gender[x].value;
+				}
+			}
+			// Reason
+			for (var y = 0; x < myf.contact-reason.length; ++x) {
+				if (myf.contact-reason[y].checked == true) {
+					myreasonvalue = myf.contact-reason[y].value;
+				}
+			}
+
+			// Name
+			if (myfirstname == "") {
+				event.preventDefault();
+				alert("Please enter your first name.")
+			}
+			else if (mylastname == "") {
+				event.preventDefault();
+				alert("Please enter your last name.")
+			}
+			// Phone Number
+			else if (isNaN(myphone) == true) {
+				event.preventDefault();
+				alert("Please enter your phone number in.")
+			}
+			else if (myphone.value.length != 10) {
+				event.preventDefault();
+				alert("Please enter a valid 10-digit phone number.")
+			}
+			// Email
+			else if ((myemail.value.excludes('@')) || (myemail.value.excludes('.'))) {
+				event.preventDefault();
+				alert("Please enter a valid email address.")
+			}
+			else {
+				event.preventDefault();
+				alert("Please enter the message.")
+			}
+		}
+	</script>
+
+</head>
+
+<body>
+	<!--Building Out the Meanu Below-->
+	<div class="banner">
+		<h1>Contact Me</h1>
+
+		<div class="topcol" id="fircol">
+
+			<!--Home Button-->
+			<a href="index.htm" class="active">Home</a>
+
+			<!--Equipment Button-->
+			<div class="drpdwn1">
+				<button class="drpbtn1"><a href="equphotography.htm">Equipment</a></button>
+				<div class="drpdwncontent1">
+					<a href="equphotography.htm">Photography</a>
+					<a href="equvideo.htm">Video</a>
+				</div>
+			</div>
+
+			<div class="drpdwn2">
+				<button class="drpbtn2"><a href="photography.htm">Photography</a></button>
+				<div class="drpdwncontent2">
+					<a href="Boston.htm">Boston</a>
+					<a href="RI.htm">Rhode Island</a>
+					<a href="NF.htm">Niagara Falls</a>
+					<a href="YS.htm">Yellowstone</a>
+					<a href="GT.htm">Great Teton</a>
+					<a href="Yosemite.htm">Yosemite</a>
+					<a href="BJ.htm">Beijing</a>
+					<a href="SR.htm">Sun Rise Observation</a>
+					<a href="Hawaii.htm">Hawaii</a>
+				</div>
+			</div>
+
+			<a href="video.htm">Video</a>
+			<a href="contact.htm">Contact Me</a>
+
+			<!--Icon-->
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	</div>
+
+	<div class="divider">
+		<hr />
+	</div>
+
+	<!--Banner Ending-->
+
+	<form id="m" class="contact" method="post" action="" onsubmit="validateForm()">
+		<!--Name-->
+		<!--required: meaning the form cannot be submitted until the user provides some input for these fields.-->
+		<div class="group">
+			<div class="name">
+				<p>First Name <span class="required">(required*)</span></p>
+				<input type="text" id="fn" name="first_name" size="10" maxlength="20" placeholder="" required>
+			</div>
+
+			<div class="name">
+				<p>Last Name <span class="required">(required*)</span></p>
+				<input type="text" id="ln" name="last_name" size="10" maxlength="20" placeholder="" required>
+			</div>
+		</div>
+
+		<!--Male or Female-->
+		<div class="group">
+			<p>Choose Your Gender <span class="required">(required*)</span></p>
+
+			<input type="radio" id="male" name="gender" value="male">
+			<p>Male</p>&nbsp; &nbsp;
+
+			<input type="radio" id="female" name="gender" value="female">
+			<p>Female</p>
+		</div>
+
+		<!--Phone Number-->
+		<div class="group">
+			<p>Phone Number <span class="required">(required*)</span></p>
+			<input type="tel" id="phone" name="phone" required>
+		</div>
+
+		<!--Email Address-->
+		<div class="group">
+			<p>Email <span class="required">(required*)</span></p>
+			<input type="email" id="email" name="email">
+		</div>
+
+		<!--Reason-->
+		<div class="group">
+			<p>Contact Reason <span class="required">(required*)</span></p>
+			<select id="contact-reason" name="contact-reason">
+				<option value="">Select your reason</option>
+				<option value="job">Job</option>
+				<option value="personal">Personal</option>
+			</select>
+		</div>
+
+		<!--Message-->
+		<div class="group">
+			<p>Message <span class="required">(required*)</span></p>
+			<textarea id="message" name="message" cols="20" placeholder=""></textarea>
+		</div>
+
+		<p>
+			<input type="submit" name="submmit" value="Submit" /> &nbsp; &nbsp;
+			<input type="reset" name="reset" value="Clear" />
+		</p>
+
+	</form>
+
+	<!--Personal Information-->
+	<img id="myself" src="home/myself.JPG" alt="Kimi's Picture" title="Kimi Gao" ; />
+	<div class="intro">
+		<p id="big">Contact Kimi Gao</p>
+		<p class="sub">Email Address: kimi.gao2002@gmail.com</p>
+		<p class="sub">Location: Los Angeles, Boston</p>
+	</div>
+
+	<!-- Social Media Links -->
+	<!--Do the ChatGPT Online-->
+	<div class="social-media-links">
+		<a href="https://www.linkedin.com/in/kimigao6" target="_blank" class="social-link linkedin">
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a href="https://www.instagram.com/kimiii_gao?igsh=OGFxeXYwOTlwc2Rv&utm_source=qr" target="_blank"
+			class="social-link instagram">
+			<i class="fab fa-instagram"></i>
+		</a>
+		<a href="https://www.youtube.com/@kimigao6" target="_blank" class="social-link youtube">
+			<i class="fab fa-youtube"></i>
+		</a>
+	</div>
+
+</body>
+
+</html>

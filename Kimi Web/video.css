@@ -1,0 +1,65 @@
+/* Slide Show CSS */
+#slider {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+#info {
+    position: relative;
+    width: 853px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border: none;
+}
+
+/* Button CSS */
+#prev {
+    left: 210px;
+}
+
+#next {
+    right: 210px;
+}
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    padding: 10px 20px;
+    top: 42%;
+    width: 55px;
+    /* the same height of the video */
+    line-height: 445px;
+    transform: translateY(-50%);
+    background-color: #f3edd1;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.space {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* CSS for the detail position */
+
+h2 {
+    font-family: Courier new;
+    font-size: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-family: Courier;
+    font-size: 18px;
+    padding-top: 2%;
+    text-align: center;
+    padding-bottom: 100px;
+}
