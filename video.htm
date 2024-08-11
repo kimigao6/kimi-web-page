@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<!--Meta-->
+	<meta name="keywords" content="Kimi Gao Portfolio, photography, photographer, youtube video, travel vlog" />
+	<meta name="description"
+		content="The misty majesty of Niagara Falls to the rugged wilderness of Yellowstone and Grand Teton, the autumnal beauty of White Mountain, and the tropical allure of Hawaii, offering a vivid glimpse into the wonders of each locale." />
+	<meta name="author" content="Kimi Gao" />
+
+	<title>Video</title>
+
+	<!--CSS Link-->
+	<Link rel="stylesheet" href="banner.css" type="text/css" />
+	<Link rel="stylesheet" href="video.css" type="text/css" />
+
+	<!--JavaScript Link-->
+	<script src="banner.js"></script>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		/* Slide Show On the Videos */
+		$(document).ready(function () {
+			event.preventDefault();
+			/* Start with the first slide */
+			var currentIndex = 0;
+			/* Includes all slides */
+			var slides = $('.space');
+			/* Initially hide all slides */
+			slides.hide();
+			/* Show only the first slide */
+			slides.eq(currentIndex).show();
+
+			/* handle changing slides */
+			/* If 'next' is true, the function moves to the next slide. Instead. */
+			function changeSlide(next) {
+				/* 'currentIframe': Find the iframe within the current slide */
+				var currentIframe = slides.eq(currentIndex).find('iframe');
+
+				/* Stop the video by resetting the iframe's src attribute */
+				var iframeSrc = currentIframe.attr('src');
+				currentIframe.attr('src', iframeSrc);
+
+				/* Hide the current slide */
+				slides.eq(currentIndex).hide();
+
+				/* Update the current index based on 'next' flag */
+				if (next) {
+					currentIndex = (currentIndex + 1) % slides.length;  // Move to the next slide index
+				} 
+				else {
+					currentIndex = (currentIndex - 1 + slides.length) % slides.length;  // Move to the previous slide index
+				}
+
+				/* Show the new slide */
+				slides.eq(currentIndex).show();
+				/* Optionally reset the video on the new slide */
+				var newIframe = slides.eq(currentIndex).find('iframe');
+				newIframe.attr('src', newIframe.attr('src'));
+			}
+
+			/* If click next, move forward */
+			$('#next').click(function () {
+				changeSlide(true);
+			});
+
+			/* If click previous, move backward */
+			$('#prev').click(function () {
+				changeSlide(false);
+			});
+		});
+	</script>
+
+
+</head>
+
+<body>
+	<!--Building Out the Meanu Below-->
+	<div class="banner">
+		<h1>Video</h1>
+
+		<div class="topcol" id="fircol">
+
+			<!--Home Button-->
+			<a href="index.htm" class="active">Home</a>
+
+			<!--Equipment Button-->
+			<div class="drpdwn1">
+				<button class="drpbtn1"><a href="equphotography.htm">Equipment</a></button>
+				<div class="drpdwncontent1">
+					<a href="equphotography.htm">Photography</a>
+					<a href="equvideo.htm">Video</a>
+				</div>
+			</div>
+
+			<div class="drpdwn2">
+				<button class="drpbtn2"><a href="photography.htm">Photography</a></button>
+				<div class="drpdwncontent2">
+					<a href="Boston.htm">Boston</a>
+					<a href="RI.htm">Rhode Island</a>
+					<a href="NF.htm">Niagara Falls</a>
+					<a href="YS.htm">Yellowstone</a>
+					<a href="GT.htm">Great Teton</a>
+					<a href="Yosemite.htm">Yosemite</a>
+					<a href="BJ.htm">Beijing</a>
+					<a href="SR.htm">Sun Rise Observation</a>
+					<a href="Hawaii.htm">Hawaii</a>
+				</div>
+			</div>
+
+			<a href="video.htm">Video</a>
+			<a href="contact.htm">Contact Me</a>
+
+			<!--Icon-->
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	</div>
+
+	<div class="divider">
+		<hr />
+	</div>
+
+	<!--Banner Ending-->
+
+	<div id="slider">
+
+		<button id="prev">&#9664;</button>
+		<button id="next">&#9654;</button>
+
+		<div id="info">
+
+			<div class="space">
+				<h2 id="first">Niagara Falls</h2>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/xPX2lbLm3cg?si=pTd5lYyatLfckjE2"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen>
+				</iframe>
+				<p id="p1">
+					A trip to Niagara Falls, particularly a boat ride, exposes me to the grandeur and beauty of the
+					falls.
+					Approaching the roaring cascade, a mist engulfs the cruise boat, offering a thrilling close-up
+					encounter
+					with nature's power. The highlight is undoubtedly watching the sunset. The changing hues of the sky
+					and
+					water mist conjure an enchanting panorama. As dusk descends, fireworks illuminate the sky above the
+					falls.
+				</p>
+			</div>
+
+			<div class="space">
+				<h2>Yellowstone & Great Teton</h2>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/x9KzdHmzzgA?si=51_qYbLsdXeV89ns"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen>
+				</iframe>
+				<p id="p2">
+					Traveling from Yellowstone to Grand Teton National Park showcases the stunning landscapes of the
+					American
+					West. Upon departing Yellowstone, you may see dramatic geothermal features set against extensive
+					forests
+					and
+					rugged mountains. On the journey to Grand Teton, the road reveals stunning views of deep canyons,
+					rushing
+					waterfalls, and tranquil lakes reflecting the sky. Amid this natural beauty, it's common to
+					encounter
+					majestic wildlife, like herds of wild bison, a testament to the untouched allure of this region.
+				</p>
+			</div>
+
+
+			<div class="space">
+				<h2>White Mountain</h2>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/EnRuLxTc_qo?si=lQOEpcs1hRPuuC8v"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen>
+				</iframe>
+				<p id="p3">
+					The sight of Baishan Falls in the crisp autumn is awe-inspiring. As the lush green of summer fades
+					into
+					golden oranges and fiery reds, it creates a stunning backdrop for the reinvigorated cascading
+					waterfalls,
+					fresh from recent rains. The air is cool and fresh, imbued with the earthy aroma of fallen leaves.
+				</p>
+			</div>
+
+			<div class="space">
+				<h2>Hawaii</h2>
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/QuDNoTvegTE?si=hRNUQjGbFtbpO9sN"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+				</iframe>
+				<p id="p4">
+					Our Hawaiian adventure spans from solemn Pearl Harbor to the awe-inspiring Big Island. We traverse
+					the
+					historic waters of Pearl Harbor, then journey along Honolulu's scenic eastern shores. The Big Island
+					offers
+					stark beauty in Hawai'i Volcanoes National Park, where the land breathes with the power of creation.
+					An
+					undersea odyssey reveals a kaleidoscope of marine life. An enchanting journey in paradise.
+				</p>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

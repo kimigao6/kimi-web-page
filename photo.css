@@ -1,0 +1,26 @@
+/* paragraphy font type */
+p {
+    font-family: Courier;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 20px;
+}
+
+.image {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img#first {
+    margin-top: 70px;
+}
+
+.basic {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 200px;
+}
